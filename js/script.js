@@ -78,3 +78,47 @@ mybutton.addEventListener("click", function () {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  document
+    .querySelector(".contact-form button")
+    .addEventListener("click", function (event) {
+      event.preventDefault(); // Prevent page reload
+
+      // Get form values
+      let name = document.querySelector("input[placeholder='Name']").value;
+      let email = document.querySelector("input[placeholder='E-mail']").value;
+      let mobile = document.querySelector(
+        "input[placeholder='Mobile No.']"
+      ).value;
+      let message = document.querySelector(
+        "textarea[placeholder='Message']"
+      ).value;
+
+      if (!name || !email || !message) {
+        alert("Please fill in all required fields.");
+        return;
+      }
+
+      // Initialize EmailJS
+      emailjs.init("V67clBuAMQzmsaGpG"); // Replace with your EmailJS Public Key
+
+      // Send email
+      emailjs
+        .send("service_y0ru77p", "template_sysqpvn", {
+          from_name: name,
+          from_email: email,
+          mobile: mobile,
+          message: message,
+        })
+        .then(
+          function (response) {
+            alert("Email sent successfully!");
+          },
+          function (error) {
+            alert("Error sending email. Please try again.");
+            console.error("EmailJS error:", error);
+          }
+        );
+    });
+});
