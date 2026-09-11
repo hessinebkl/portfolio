@@ -1,447 +1,978 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BOUKAL Lahoucine</title>
 
-    <!-- bootstrap css cdn link  -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
-      crossorigin="anonymous"
-    />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- custom css file -->
-    <link rel="stylesheet" href="css/style.css" />
+    <meta name="description"
+        content="Portfolio of Lahoucine BOUKAL - Transversal Project Management Officer specializing in AMS/TMA performance, Power BI, KPI and SLA monitoring.">
 
-    <!-- google font link -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <title>Lahoucine BOUKAL | Project Management Officer</title>
 
-    <!-- bootstrap icon cdn link  -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css"
-    />
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
 
-    <!-- for adding animation to website we have use AOS library 
-    AOS Library css file cdn link -->
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-    <!-- jquery cdn link  -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-  </head>
-  <body>
-    <!-- navbar starts -->
-    <nav
-      id="navbar-top"
-      class="navbar navbar-expand-lg navbar-light bg-white sticky-top"
-    >
-      <div class="container-fluid px-5">
-        <a class="navbar-brand fw-bold fs-2" href="#" style="color: #3f396d"
-          ></a
-        >
-        <button
-          class="nav-menu d-md-none"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-        >
-          <i class="bi bi-menu-button-fill"></i>
-        </button>
-        <div
-          class="collapse navbar-collapse justify-content-center"
-          id="navbarNav"
-        >
-          <ul class="navbar-nav gap-4" style="font-size: 1.1rem">
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#service">Service</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#about">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#portfolio">Portfolio</a>
-            </li>
-           
-          
-          </ul>
-        <!-- </div>
-        <button class="c-btn ms-4 py-2 px-4 rounded-pill d-none d-md-block">Contact</button>
-      </div> -->
-    </nav>
-    <!-- navbar ends here -->
+    <link rel="stylesheet" href="style.css">
+</head>
 
-    <!-- home section starts  -->
-    <section class="home pt-5 pb-5" id="home">
-      <div class="row justify-content-evenly align-middle">
-        <!-- here data-aos is used for adding aos animation  -->
-        <div class="col-10 col-md-6 text-center text-md-start" data-aos="slide-right">
-          <h2 style="color: #3f396d">
-            Hello! I Am <br /><span class="c-orange">BOUKAL Lahoucine</span>
-          </h2>
-          <p class="text-muted">
-            I am a dedicated full stack developer with expertise in Java, Angular, and Spring Boot. I specialize in building scalable, secure, and user-friendly applications with a strong focus on performance,
-            maintainability, and clean architecture
-          </p>
-          <button id="hire-me-btn" class="c-btn h-btn mt-3 py-3 px-5 rounded-pill">
-            Hire Me
-          </button>
-          <a href="" class="link ms-4 d-none">See My Work</a>
+<body>
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+    <header class="header">
+
+        <div class="container navbar">
+
+            <a href="#home" class="logo">
+                LB<span>.</span>
+            </a>
+
+            <nav class="nav-menu" id="navMenu">
+
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#education" class="nav-link">Education</a>
+                <a href="#contact" class="nav-link">Contact</a>
+
+            </nav>
+
+            <div class="nav-actions">
+
+                <button id="themeToggle" class="theme-toggle"
+                    aria-label="Toggle dark mode">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+
+                <button class="menu-toggle" id="menuToggle"
+                    aria-label="Open menu">
+
+                    <i class="fa-solid fa-bars"></i>
+
+                </button>
+
+            </div>
+
         </div>
-      </div>
-    </section>
-    <!-- home section ends here -->
 
-    <!-- expertise section starts -->
-    <section class="expertise mt-5" id="service">
-      <div class="heading text-center">
-        <small>My Expertise</small>
-        <h3>
-          Provide Wide Range of <br />
-          Digital Services
-        </h3>
-      </div>
-      <div class="row justify-content-evenly mt-5">
-        <div class="col-10 col-md-4" data-aos="fade-up">
-          <div class="service-card">
-            <div class="img">
-              <img
-                src="images/service-icon1.png"
-                class="w-25 img-fluid img"
-                alt=""
-              />
-            </div>
-            <div class="content mt-3">
-              <h4>Web Design</h4>          
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 col-10" data-aos="fade-up">
-          <div class="service-card">
-            <div class="img">
-              <img
-                src="images/service-icon2.png"
-                class="w-25 img-fluid img"
-                alt=""
-              />
-            </div>
-            <div class="content mt-3">
-              <h4>Web Development</h4>             
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 col-10" data-aos="fade-up">
-          <div class="service-card">
-            <div class="img">
-              <img
-                src="images/service-icon3.png"
-                class="w-25 img-fluid img"
-                alt=""
-              />
-            </div>
-            <div class="content mt-3">
-              <h4>Debugging</h4>
-             
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- expertise section ends here -->
+    </header>
 
-    <!-- skill section starts -->
-    <section class="skill mt-5 py-5" id="about">
-      <div class="row justify-content-evenly">
-        <div class="col-10 col-md-5 skill-with-progress" data-aos="slide-right">
-          <div class="row justify-content-evenly">
-            <div class="col-10 col-md-6">
-              <div class="progress-card ms-3 ms-md-0">
-                <div class="circular-progress html-css" data-percentage="85">
-                  <span class="progress-value html-progress">85%</span>
+
+    <!-- =========================
+         HERO
+    ========================== -->
+    <main>
+
+        <section class="hero" id="home">
+
+            <div class="container hero-container">
+
+                <div class="hero-content reveal">
+
+                    <div class="status">
+                        <span class="status-dot"></span>
+                        Project Management Officer
+                    </div>
+
+                    <p class="hero-intro">
+                        Hello, I'm
+                    </p>
+
+                    <h1>
+                        Lahoucine
+                        <span>BOUKAL</span>
+                    </h1>
+
+                    <h2>
+                        Transversal Project Management Officer
+                    </h2>
+
+                    <p class="hero-description">
+                        Project Management Officer specializing in
+                        Application Maintenance Services (AMS/TMA),
+                        performance monitoring, business intelligence
+                        and data-driven operational reporting.
+                    </p>
+
+                    <div class="hero-buttons">
+
+                        <a href="#experience" class="btn btn-primary">
+                            <i class="fa-solid fa-briefcase"></i>
+                            View Experience
+                        </a>
+
+                        <a href="CV.pdf"
+                            target="_blank"
+                            class="btn btn-secondary">
+
+                            <i class="fa-solid fa-file-arrow-down"></i>
+                            Download CV
+
+                        </a>
+
+                    </div>
+
+                    <div class="hero-socials">
+
+                        <a href="https://www.linkedin.com/in/hessinebkl/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="LinkedIn">
+
+                            <i class="fa-brands fa-linkedin-in"></i>
+
+                        </a>
+
+                        <a href="https://github.com/hessinebkl"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="GitHub">
+
+                            <i class="fa-brands fa-github"></i>
+
+                        </a>
+
+                        <a href="mailto:hessine.boukal@gmail.com"
+                            aria-label="Email">
+
+                            <i class="fa-solid fa-envelope"></i>
+
+                        </a>
+
+                    </div>
+
                 </div>
-                <br />
-                <span class="text">Front-end</span>
-              </div>
-            </div>
-            <div class="col-10 col-md-6 mt-4 mt-md-0">
-              <div class="progress-card ms-3 ms-md-0">
-                <div class="circular-progress javascript" data-percentage="95">
-                  <span class="progress-value javascript-progress">95%</span>
+
+
+                <div class="hero-card reveal">
+
+                    <div class="profile-card">
+
+                        <div class="profile-icon">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+
+                        <h3>PMO & Performance</h3>
+
+                        <p>
+                            Turning operational data into actionable
+                            insights for better service performance
+                            and decision-making.
+                        </p>
+
+                        <div class="quick-skills">
+
+                            <span>Power BI</span>
+                            <span>DAX</span>
+                            <span>Power Query</span>
+                            <span>JQL</span>
+                            <span>KPI</span>
+                            <span>SLA</span>
+
+                        </div>
+
+                    </div>
+
                 </div>
-                <br />
-                <span class="text">Back-end</span>
-              </div>
+
             </div>
-          </div>
-          <div class="row justify-content-evenly mt-4">
-            <div class="col-10 col-md-6">
-              <div class="progress-card ms-3 ms-md-0">
-                <div class="circular-progress php" data-percentage="75">
-                  <span class="progress-value php-progress">75%</span>
+
+        </section>
+
+
+        <!-- =========================
+             ABOUT
+        ========================== -->
+        <section class="section about" id="about">
+
+            <div class="container">
+
+                <div class="section-heading reveal">
+
+                    <p class="section-label">
+                        About Me
+                    </p>
+
+                    <h2>
+                        PMO with a technical background
+                    </h2>
+
                 </div>
-                <br />
-                <span class="text">Testing</span>
-              </div>
-            </div>
-            <div class="col-10 col-md-6 mt-4 mt-md-0">
-              <div class="progress-card ms-3 ms-md-0">
-                <div class="circular-progress reactjs" data-percentage="80">
-                  <span class="progress-value reactjs-progress">80%</span>
+
+
+                <div class="about-grid">
+
+                    <div class="about-text reveal">
+
+                        <p>
+                            I am a Project Management Officer specializing
+                            in Application Maintenance Services
+                            (AMS/TMA) performance management.
+                        </p>
+
+                        <p>
+                            My work focuses on monitoring operational
+                            performance through KPIs, SLAs, workload,
+                            ticket volumes and backlog indicators.
+                        </p>
+
+                        <p>
+                            I develop interactive Power BI dashboards
+                            and operational and executive reports that
+                            transform data into actionable insights for
+                            team performance, service quality and
+                            operational efficiency.
+                        </p>
+
+                        <p>
+                            Before moving into project management,
+                            I worked as a Full-Stack Software Developer,
+                            giving me a strong technical foundation that
+                            helps bridge the gap between development
+                            teams, operations and management.
+                        </p>
+
+                    </div>
+
+
+                    <div class="about-details reveal">
+
+                        <div class="detail-card">
+
+                            <div class="detail-icon">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+
+                            <div>
+                                <span>Location</span>
+                                <strong>Rabat, Morocco</strong>
+                            </div>
+
+                        </div>
+
+
+                        <div class="detail-card">
+
+                            <div class="detail-icon">
+                                <i class="fa-solid fa-briefcase"></i>
+                            </div>
+
+                            <div>
+                                <span>Current Role</span>
+                                <strong>Project Management Officer</strong>
+                            </div>
+
+                        </div>
+
+
+                        <div class="detail-card">
+
+                            <div class="detail-icon">
+                                <i class="fa-solid fa-chart-column"></i>
+                            </div>
+
+                            <div>
+                                <span>Specialization</span>
+                                <strong>AMS/TMA Performance</strong>
+                            </div>
+
+                        </div>
+
+
+                        <div class="detail-card">
+
+                            <div class="detail-icon">
+                                <i class="fa-solid fa-language"></i>
+                            </div>
+
+                            <div>
+                                <span>Languages</span>
+                                <strong>English & French</strong>
+                            </div>
+
+                        </div>
+
+                    </div>
+
                 </div>
-                <br>
-                <span class="text">UI-UX</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-10 col-md-5 skill-detail" data-aos="slide-left">
-          <div class="heading mt-5 mt-md-3">
-            <small>My Skills</small>
-            <h3>Innovative & Dynamic Web Solutions</h3>
-            <p class="text-muted">
-              With expertise in Java, Angular, Spring Boot, and full-stack development, I bring ideas to life 
-              through seamless and efficient digital experiences.
-            </p>
-            <p class="text-muted">
-              Let’s build something great together!
-            </p>
-            <button class="c-btn h-btn mt-3 py-3 px-5 rounded-pill">
-              <!-- here download attribute is used for adding download functionality to button  -->
-              <a
-                href="CV.pdf"
-                download="BOUKAL LAHOUCINE CV"
-                style="text-decoration: none;color: #fff;"
-                >Download CV</a
-              >
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- skill section end here -->
 
-    <!-- portfolio section starts here -->
-    <section class="portfolio" id="portfolio">
-      <div class="heading text-center pt-5">
-        <small>Creative Work</small>
-        <h3>Check My Portfolio</h3>
-      </div>
+            </div>
 
-     
-      <div class="portfolio-body">
-        <div class="row justify-content-evenly px-4">
-          <div class="post col-md-4 game all col-10 mt-3 mt-md-0" data-aos="fade-up">
-            <div class="card">
-              <img style="width: 256px; align-self: center;" src="images/bar-chart.png" class="card-img-top" alt="..."/>
-              <div class="card-body text-center">
-                <h4 class="card-title">Project Managment Application</h4>
-                <span class="badge bg-secondary badge-pill">Angular</span>
-                <span class="badge bg-secondary badge-pill">Spring Boot</span>
-                <span class="badge bg-secondary badge-pill">MySQL Workbench</span>
-                <span class="badge bg-secondary badge-pill">Maven</span>
-                <span class="badge bg-secondary badge-pill">Draw.io</span>
-                <span class="badge bg-secondary badge-pill">Bootstrap</span>
-                <span class="badge bg-secondary badge-pill">Angular</span>
-                <span class="badge bg-secondary badge-pill">Postman</span>
-                <br />
-                <a target="_blank" href="https://github.com/hessinebkl/Plan-de-charge-Application-backend" class="link">Github Repository</a>
-              </div>
-            </div> 
-          </div>
+        </section>
+
+
+        <!-- =========================
+             EXPERIENCE
+        ========================== -->
+        <section class="section experience-section" id="experience">
+
+            <div class="container">
+
+                <div class="section-heading reveal">
+
+                    <p class="section-label">
+                        Career
+                    </p>
+
+                    <h2>
+                        Professional Experience
+                    </h2>
+
+                    <p>
+                        From software development to project
+                        management and performance monitoring.
+                    </p>
+
+                </div>
+
+
+                <div class="timeline">
+
+                    <!-- CGI PMO -->
+                    <div class="timeline-item reveal">
+
+                        <div class="timeline-dot"></div>
+
+                        <div class="timeline-card">
+
+                            <div class="job-header">
+
+                                <div>
+                                    <span class="job-company">CGI</span>
+
+                                    <h3>
+                                        Project Management Officer
+                                    </h3>
+                                </div>
+
+                                <span class="job-date">
+                                    Mar 2025 — Present
+                                </span>
+
+                            </div>
+
+                            <p class="job-location">
+                                <i class="fa-solid fa-location-dot"></i>
+                                Rabat, Morocco
+                            </p>
+
+                            <p>
+                                Supporting Application Maintenance
+                                Services performance management through
+                                operational reporting, business
+                                intelligence and data-driven monitoring.
+                            </p>
+
+                            <div class="job-tags">
+
+                                <span>Power BI</span>
+                                <span>KPI Monitoring</span>
+                                <span>SLA Monitoring</span>
+                                <span>AMS / TMA</span>
+                                <span>DAX</span>
+                                <span>Power Query</span>
+                                <span>JQL</span>
+                                <span>Backlog Monitoring</span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- CGI Developer -->
+                    <div class="timeline-item reveal">
+
+                        <div class="timeline-dot"></div>
+
+                        <div class="timeline-card">
+
+                            <div class="job-header">
+
+                                <div>
+                                    <span class="job-company">
+                                        CGI
+                                    </span>
+
+                                    <h3>
+                                        Full-Stack Software Developer
+                                    </h3>
+                                </div>
+
+                                <span class="job-date">
+                                    Jun 2023 — Feb 2025
+                                </span>
+
+                            </div>
+
+                            <p class="job-location">
+                                <i class="fa-solid fa-location-dot"></i>
+                                Fez, Morocco
+                            </p>
+
+                            <p>
+                                Worked as a Full-Stack Software Developer
+                                before transitioning into Project
+                                Management and performance management.
+                            </p>
+
+                            <div class="job-tags">
+
+                                <span>Full-Stack Development</span>
+                                <span>Software Development</span>
+                                <span>Web Applications</span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- IGADOR -->
+                    <div class="timeline-item reveal">
+
+                        <div class="timeline-dot"></div>
+
+                        <div class="timeline-card">
+
+                            <div class="job-header">
+
+                                <div>
+
+                                    <span class="job-company">
+                                        IGADOR
+                                    </span>
+
+                                    <h3>
+                                        Web Developer
+                                    </h3>
+
+                                </div>
+
+                                <span class="job-date">
+                                    Feb 2023 — May 2023
+                                </span>
+
+                            </div>
+
+                            <p class="job-location">
+                                <i class="fa-solid fa-location-dot"></i>
+                                Tiznit, Morocco
+                            </p>
+
+                            <p>
+                                Web development role contributing to
+                                the creation and maintenance of web
+                                solutions.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- COSSA -->
+                    <div class="timeline-item reveal">
+
+                        <div class="timeline-dot"></div>
+
+                        <div class="timeline-card">
+
+                            <div class="job-header">
+
+                                <div>
+
+                                    <span class="job-company">
+                                        ETABLISSIMENT COSSA
+                                    </span>
+
+                                    <h3>
+                                        Web Developer
+                                    </h3>
+
+                                </div>
+
+                                <span class="job-date">
+                                    Jan 2018 — Apr 2018
+                                </span>
+
+                            </div>
+
+                            <p class="job-location">
+                                <i class="fa-solid fa-location-dot"></i>
+                                Agadir, Morocco
+                            </p>
+
+                            <p>
+                                Web development experience including
+                                WordPress development.
+                            </p>
+
+                            <div class="job-tags">
+                                <span>Web Development</span>
+                                <span>WordPress</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             SKILLS
+        ========================== -->
+        <section class="section skills-section" id="skills">
+
+            <div class="container">
+
+                <div class="section-heading reveal">
+
+                    <p class="section-label">
+                        Expertise
+                    </p>
+
+                    <h2>
+                        Skills & Competencies
+                    </h2>
+
+                    <p>
+                        A combination of project management,
+                        analytics, reporting and technical knowledge.
+                    </p>
+
+                </div>
+
+
+                <div class="skills-grid">
+
+
+                    <!-- PMO -->
+                    <div class="skill-category reveal">
+
+                        <div class="skill-category-icon">
+                            <i class="fa-solid fa-diagram-project"></i>
+                        </div>
+
+                        <h3>
+                            PMO & Service Management
+                        </h3>
+
+                        <div class="skill-list">
+
+                            <div class="skill">
+                                <i class="fa-solid fa-check"></i>
+                                KPI Monitoring
+                            </div>
+
+                            <div class="skill">
+                                <i class="fa-solid fa-check"></i>
+                                SLA Monitoring
+                            </div>
+
+                            <div class="skill">
+                                <i class="fa-solid fa-check"></i>
+                                AMS / TMA Performance
+                            </div>
+
+                            <div class="skill">
+                                <i class="fa-solid fa-check"></i>
+                                Workload Monitoring
+                            </div>
+
+                            <div class="skill">
+                                <i class="fa-solid fa-check"></i>
+                                Ticket Volume Monitoring
+                            </div>
+
+                            <div class="skill">
+                                <i class="fa-solid fa-check"></i>
+                                Backlog Monitoring
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- BI -->
+                    <div class="skill-category reveal">
+
+                        <div class="skill-category-icon">
+                            <i class="fa-solid fa-chart-pie"></i>
+                        </div>
+
+                        <h3>
+                            Business Intelligence
+                        </h3>
+
+                        <div class="skill-list">
+
+                            <div class="skill">
+                                <i class="fa-solid fa-check"></i>
+                                Power BI
+                            </div>
+
+                            <div class="skill">
+                                <i class="fa-solid fa-check"></i>
+                                DAX
+                            </div>
+
+                            <div class="skill">
+                                <i class="fa-solid fa-check"></i>
+                                Microsoft Power Query
+                            </div>
+
+                            <div class="skill">
+                                <i class="fa-solid fa-check"></i>
+                                Interactive Dashboards
+                            </div>
+
+                            <div class="skill">
+                                <i class="fa-solid fa-check"></i>
+                                Operational Reporting
+                            </div>
+
+                            <div class="skill">
+                                <i class="fa-solid fa-check"></i>
+                                Executive Reporting
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Analytics -->
+                    <div class="skill-category reveal">
+
+                        <div class="skill-category-icon">
+                            <i class="fa-solid fa-magnifying-glass-chart"></i>
+                        </div>
+
+                        <h3>
+                            Analysis & Performance
+                        </h3>
+
+                        <div class="skill-list">
+
+                            <div class="skill">
+                                <i class="fa-solid fa-check"></i>
+                                Data Analysis
+                            </div>
+
+                            <div class="skill">
+                                <i class="fa-solid fa-check"></i>
+                                Performance Analysis
+                            </div>
+
+                            <div class="skill">
+                                <i class="fa-solid fa-check"></i>
+                                Operational Efficiency
+                            </div>
+
+                            <div class="skill">
+                                <i class="fa-solid fa-check"></i>
+                                Service Quality Analysis
+                            </div>
+
+                            <div class="skill">
+                                <i class="fa-solid fa-check"></i>
+                                Data-Driven Decision Making
+                            </div>
+
+                            <div class="skill">
+                                <i class="fa-solid fa-check"></i>
+                                JQL
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             EDUCATION
+        ========================== -->
+        <section class="section education-section" id="education">
+
+            <div class="container">
+
+                <div class="section-heading reveal">
+
+                    <p class="section-label">
+                        Education
+                    </p>
+
+                    <h2>
+                        Academic Background
+                    </h2>
+
+                </div>
+
+
+                <div class="education-grid">
+
+                    <div class="education-card reveal">
+
+                        <div class="education-icon">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+
+                        <span class="education-date">
+                            2023 — 2024
+                        </span>
+
+                        <h3>
+                            Licence Professionnelle d'Université
+                        </h3>
+
+                        <p class="school">
+                            Université Euro-Méditerranéenne de Fès
+                        </p>
+
+                        <p>
+                            Information Technology
+                        </p>
+
+                    </div>
+
+
+                    <div class="education-card reveal">
+
+                        <div class="education-icon">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+
+                        <span class="education-date">
+                            2019 — 2020
+                        </span>
+
+                        <h3>
+                            European Bachelor's in IT and Networks
+                        </h3>
+
+                        <p class="school">
+                            Ecoles Françaises d'Enseignement
+                            Technique Agadir
+                        </p>
+
+                        <p>
+                            Development and Databases specialization.
+                        </p>
+
+                    </div>
+
+
+                    <div class="education-card reveal">
+
+                        <div class="education-icon">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+
+                        <span class="education-date">
+                            2017 — 2019
+                        </span>
+
+                        <h3>
+                            Technicien Spécialisé
+                        </h3>
+
+                        <p class="school">
+                            Ecoles Françaises d'Enseignement
+                            Technique Agadir
+                        </p>
+
+                        <p>
+                            Développement Informatique
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Certification -->
+                <div class="certification reveal">
+
+                    <div class="certification-icon">
+                        <i class="fa-solid fa-certificate"></i>
+                    </div>
+
+                    <div>
+
+                        <span>Certification</span>
+
+                        <h3>
+                            EF SET English Certificate
+                        </h3>
+
+                        <p>
+                            63/100 — C1 Advanced
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             CONTACT
+        ========================== -->
+        <section class="section contact-section" id="contact">
+
+            <div class="container">
+
+                <div class="contact-card reveal">
+
+                    <div>
+
+                        <p class="section-label">
+                            Get In Touch
+                        </p>
+
+                        <h2>
+                            Let's connect.
+                        </h2>
+
+                        <p>
+                            Interested in discussing project management,
+                            PMO, reporting, analytics or technology?
+                            Feel free to contact me.
+                        </p>
+
+                    </div>
+
+
+                    <div class="contact-buttons">
+
+                        <a href="mailto:hessine.boukal@gmail.com"
+                            class="btn btn-primary">
+
+                            <i class="fa-solid fa-envelope"></i>
+                            Send Email
+
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/hessinebkl/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="btn btn-secondary">
+
+                            <i class="fa-brands fa-linkedin"></i>
+                            LinkedIn
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+    <footer>
+
+        <div class="container footer-container">
+
+            <div>
+
+                <a href="#home" class="logo">
+                    LB<span>.</span>
+                </a>
+
+                <p>
+                    Transversal Project Management Officer
+                </p>
+
+            </div>
+
+
+            <div class="footer-socials">
+
+                <a href="https://www.linkedin.com/in/hessinebkl/"
+                    target="_blank"
+                    aria-label="LinkedIn">
+
+                    <i class="fa-brands fa-linkedin-in"></i>
+
+                </a>
+
+                <a href="https://github.com/hessinebkl"
+                    target="_blank"
+                    aria-label="GitHub">
+
+                    <i class="fa-brands fa-github"></i>
+
+                </a>
+
+                <a href="mailto:hessine.boukal@gmail.com"
+                    aria-label="Email">
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                </a>
+
+            </div>
+
         </div>
 
-        <div class="row justify-content-evenly mt-4 px-4">
-          <div class="post col-md-4 game all col-10 mt-3 mt-md-0" data-aos="fade-up">
-            <div class="card">
-              <img style="width: 256px; align-self: center;" src="images/chatbot.png" class="card-img-top" alt="..." />
-              <div class="card-body text-center">
-                <h4 class="card-title">ChatBot</h4>
-                <span class="badge bg-secondary badge-pill"> Java</span>
-                <span class="badge bg-secondary badge-pill"> Spring Security</span>
-                <span class="badge bg-secondary badge-pill"> Angular</span>
-                <span class="badge bg-secondary badge-pill"> Bootstrap</span>
-                <span class="badge bg-secondary badge-pill">JWT</span>
-                <span class="badge bg-secondary badge-pill">Spring Boot</span>
-                <span class="badge bg-secondary badge-pill"> MySQL Workbench</span>
-                <span class="badge bg-secondary badge-pill"> OpenAI</span>
-                <span class="badge bg-secondary badge-pill">Postman</span>
-                <br />
-                <a target="_blank"  href="https://github.com/hessinebkl/chatbot-local-backend" class="read-more-btn link">Github Repository</a>
-              </div>
-            </div>
-          </div>
-         
-          <div class="post col-md-4 all col-10 mt-3 mt-md-0" data-aos="fade-up">
-            <div class="card">
-                <img style="width: 256px; align-self: center;" src="images/digital-library.png" class="card-img-top" alt="..."/>
-              <div class="card-body text-center">
-                <h4 class="card-title">Online Library</h4>
-                <span class="badge bg-secondary badge-pill">Java</span>
-                <span class="badge bg-secondary badge-pill">Spring Boot</span>
-                <span class="badge bg-secondary badge-pill">PostgreSQL</span>
-                <span class="badge bg-secondary badge-pill">Git</span>
-                <span class="badge bg-secondary badge-pill">Angular</span>
-                <span class="badge bg-secondary badge-pill">Spring Security</span>
-                <span class="badge bg-secondary badge-pill">JWT</span>
-                <span class="badge bg-secondary badge-pill">BootStrap</span>
-                <span class="badge bg-secondary badge-pill">Postman</span>          
-                <br />
-                <a target="_blank" href="https://github.com/hessinebkl/biblio_front" class="read-more-btn link"> Github Repository</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- portfolio section ends here -->
 
-    <!-- contact section starts -->
-    <section class="contact py-5" id="contact">
-      <div class="heading text-center">
-        <small>Get in Touch</small>
-        <h3>Any Questions? Feel Free to Contact</h3>
-      </div>
-      <div class="row justify-content-evenly mt-5">
-        <div class="col-md-5 col-10 contact-details" data-aos="slide-right">
-          <div class="row justify-content-evenly">
-            <div class="col-1">
-              <i class="bi bi-geo-alt-fill"></i>
-            </div>
-            <div class="col-11">
-              <p> Rabat, Rabat-Salé-Kénitra, Morocco</p>
-            </div>
-          </div>
-          <div class="row justify-content-evenly">
-            <div class="col-1">
-              <i class="bi bi-telephone-fill"></i>
-            </div>
-            <div class="col-11">
-              <p>+212 6 25 30 29 55</p>
-            </div>
-          </div>
-          <div class="row justify-content-evenly">
-            <div class="col-1">
-              <i class="bi bi-send-fill"></i>
-            </div>
-            <div class="col-11">
-              <p>hessine.boukal@gmail.com</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-5 col-10 mt-3 mt-md-0" data-aos="slide-left">
-          <div class="contact-form">
-            <div class="mb-3">
-              <input
-                type="text"
-                class="form-control"
-                id="exampleFormControlInput1"
-                placeholder="Name"
-              />
-            </div>
-            <div class="mb-3">
-              <input
-                type="email"
-                class="form-control"
-                id="exampleFormControlInput1"
-                placeholder="E-mail"
-              />
-            </div>
-            <div class="mb-3">
-              <input
-                type="text"
-                class="form-control"
-                id="exampleFormControlInput1"
-                placeholder="Mobile No."
-              />
-            </div>
-            <div class="mb-3">
-              <textarea
-                class="form-control"
-                id="exampleFormControlTextarea1"
-                placeholder="Message"
-                rows="5"
-              ></textarea>
-            </div>
-            <button class="c-btn h-btn mt-3 py-3 px-5 rounded-pill">
-              Submit
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- contact section ends here -->
+        <div class="copyright">
 
-      <!-- now we will make back to  top button when user click on it it will be redirected to top page  -->
-    <button
-      type="button"
-      class="btn btn-floating btn-lg rounded-pill"
-      id="btn-back-to-top"
-    >
-      <i class="bi bi-arrow-up"></i>
+            © <span id="year"></span>
+            Lahoucine BOUKAL. All rights reserved.
+
+        </div>
+
+    </footer>
+
+
+    <!-- Scroll to top -->
+    <button id="scrollTop" class="scroll-top"
+        aria-label="Scroll to top">
+
+        <i class="fa-solid fa-arrow-up"></i>
+
     </button>
 
-    <!-- footer section starts  -->
-    <footer class="text-center text-muted py-4">
-      <h3 class="text-white pt-4" data-aos="fade-up">BOUKAL Lahoucine</h3>
-      <div class="link-group mt-5" data-aos="fade-up">
-        <a href="#home">Home</a>
-        <div class="vr"></div>
-        <a href="#about">About</a>
-        <div class="vr"></div>
-        <a href="#service">Service</a>
-        <div class="vr"></div>
-        <a href="#portfolio">Portfolio</a>
-       
-        <div class="vr"></div>
-        <a href="#contact">Contact</a>
-      </div>
-      <div class="social-links mt-5 d-flex justify-content-center gap-4" data-aos="fade-up">
-        <a href="https://www.linkedin.com/in/hessinebkl/" target="_blank" class="rounded-pill linkedin" style="text-decoration: none; color: inherit; font-size: 2rem;">
-          <i class="bi bi-linkedin"></i>
-        </a>
-        <a href="https://fb.com/hessinebkl" target="_blank" class="rounded-pill x" style="text-decoration: none; color: inherit; font-size: 2rem;">
-          <i class="bi bi-facebook"></i>
-        </a>
-        <a href="https://github.com/hessinebkl" target="_blank" class="rounded-pill github" style="text-decoration: none; color: inherit; font-size: 2rem;">
-          <i class="bi bi-github"></i>
-        </a>
-      </div>
-      <hr class="text-muted my-4" />
-      
 
-      <p>Copyright 2025 Portfolio | All Rights Reserved.</p>
-    </footer>
-    <!-- footer section ends here -->
+    <script src="script.js"></script>
 
-      <!-- bootstrap javascript cdn link  -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-      crossorigin="anonymous"
-    ></script>
+</body>
 
-    <!-- AOS library javascript link  -->
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      // initializing AOS library
-      AOS.init({
-        duration: 1000,
-        offset: 50,
-      });
-    </script>
-    <!-- custom js file linking -->
-    <script src="js/script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-  </body>
 </html>
